@@ -1,0 +1,12 @@
+<!-- Legacy: Local-Shop-AN(Facebook)-CM-AddToCart -->
+<button id="addToCartButton">장바구니에 담기</button>
+<script type="text/javascript">
+document.getElementById(addToCartButton).addEventListener('click', function() {
+	
+  fbq('track', 'AddToCart', {
+    value: totalPrice,
+    currency: 'KRW',
+  });
+
+}, false);
+</script>

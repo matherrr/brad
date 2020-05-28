@@ -1,0 +1,21 @@
+<!-- Legacy: Local-Shop-AN(WIDER PLANET)-CM-All -->
+<!-- WIDERPLANET SCRIPT START 2018.11.2 -->
+<div id="wp_tg_cts" style="display:none;"></div>
+<script type="text/javascript">
+  var wptg_tagscript_vars = wptg_tagscript_vars || [];
+
+  wptg_tagscript_vars.push(function() {
+    return {
+      wp_hcuid: "",
+      ti: "43414",
+      ty: "Home",
+      device: "web"
+    };
+  });
+</script>
+<script
+  type="text/javascript"
+  async
+  src="//cdn-aitg.widerplanet.com/js/wp_astg_4.0.js"
+></script>
+<!-- // WIDERPLANET SCRIPT END 2018.11.2 -->

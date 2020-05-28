@@ -1,0 +1,26 @@
+/* Legacy: Local-Shop-AN(Appier)-CM-Purchase */
+
+var trackingProducts = $('.trackingProducts').val();
+var arrProductInfo = trackingProducts.split(",");
+var totalPrice = 0;
+var appierRtorderId = $('.trackingOrderConfirmation').val();
+var appierRtItemList = []; 
+for(var i=0; i<arrProductInfo.length; i++) {
+  var product = arrProductInfo[i].split(";");
+  appierRtItemList.push({"productID" : product[1]});
+  appierRtItemList.push({"unit" : product[2]});
+  appierRtItemList.push({"price" : product[3]});
+  totalPrice = totalPrice + parseInt( $.trim( product[3]).replace(/[^0-9]/g,'')) / 10;
+}
+var appierRtPrice = totalPrice;
+var appierRtCurrency = "KRW";
+
+
+//========= PLEASE DO NOT CHANGE BELOW =========
+window.appier_q = window.appier_q || [];
+window.appier_q.push(
+ { t: "register", content: { id: "1MAA", site: "samsung.com" } },
+ {"t":"type_purchase",  "itemList":appierRtItemList, "totalvalue":appierRtPrice, "currency":appierRtCurrency, "action_id": "fqVA88QBtbLRuOw","track_id":"zwCBPghxmhhwnQO","opts":{"uu":appierRtorderId, "action_param1" : JSON.stringify(appierRtItemList), "total_revenue" : appierRtPrice, "currency" : appierRtCurrency}}
+);
+$.getScript("//jscdn.appier.net/aa.js?id=samsung.com", function (data, textStatus, jqxhr) {
+});

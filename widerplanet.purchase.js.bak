@@ -1,0 +1,5 @@
+/* Legacy: Local-Shop-AN(WIDER PLANET)-CM-Purchase */
+var orderNum =  $('.trackingOrderConfirmation').val();
+var _url = "http://astg.widerplanet.com/delivery/wpc.php?ti=43414&ty=PurchaseComplete&v=1&im=img&i0=" + orderNum + "&t0=주문완료&p0=1&u0=" +orderNum;
+
+$('body').append("<img src="+ _url + " width=\"0\" height=\"0\"/>");

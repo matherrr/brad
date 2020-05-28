@@ -1,0 +1,27 @@
+/* Legacy: Local-Shop-AN(Appier)-CM-Buy Action */
+window.appierRtAddToCart = [];
+$(function() {
+    var el = $('.cart-product-list');
+    var row = el.find('.cart-item-row');
+ 		var returnNum = function(str) {return str.replace(/[^0-9]/gm, ''); };
+
+    row.each(function() {
+        var id = $.trim($(this).find('.cart-item-sku').text());
+        var price = $.trim(returnNum($(this).find('.item-price:visible').text()));
+        var quantity = $.trim($(this).find('input[name="quantity"]').val());
+        appierRtAddToCart.push({
+            productID: id,
+            price: price,
+            unit: quantity
+        });
+    });
+});
+//========= PLEASE DO NOT CHANGE BELOW =========
+window.appier_q = window.appier_q || [];
+window.appier_q.push(
+   {"t": "register", content: { id: "1MAA", site: "samsung.com" }},
+   {"t": "type_addcart", "itemList":appierRtAddToCart}
+);
+
+$.getScript("//jscdn.appier.net/aa.js?id=samsung.com", function (data, textStatus, jqxhr) {
+});

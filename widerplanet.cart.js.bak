@@ -1,0 +1,14 @@
+/* Legacy: Local-Shop-AN(WIDER PLANET)-CM-Buy Action */
+var rows = document.getElementsByClassName("cart-item-row");
+var rowLength = rows.length;
+
+var _url = "http://astg.widerplanet.com/delivery/wpc.php?ti=43414&ty=Cart&v=1&im=img"
+
+for(var i=0; i<rowLength; i++) {
+  var row = rows[i];
+  var code = row.getElementsByClassName("cart-item-sku")[0].innerHTML;
+  var name = row.getElementsByClassName("name")[0].innerHTML.replace(/ /g, "_").replace(/<br>/g, "_");
+  _url = _url + "&i0=" + code +"&t0="+name;
+}
+
+$('body').append("<img src="+ _url + " width=\"0\" height=\"0\"/>")

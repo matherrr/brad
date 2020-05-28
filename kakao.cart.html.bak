@@ -1,0 +1,13 @@
+<!-- Legacy: Local-Shop-AN-CM-Buy action(KAKAO) -->
+<script type="text/javascript" charset="UTF-8" src="//t1.daumcdn.net/adfit/static/kp.js"></script>
+<script type="text/javascript">
+      kakaoPixel('4991698368817838963').pageView();
+      kakaoPixel('4991698368817838963').viewCart();
+</script>
+
+
+<script type="text/javascript" charset="UTF-8" src="//t1.daumcdn.net/adfit/static/kp.js"></script>
+<script type="text/javascript">
+      kakaoPixel('2600209837813220190').pageView();
+      kakaoPixel('2600209837813220190').viewCart();
+</script>

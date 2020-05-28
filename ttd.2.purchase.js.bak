@@ -1,0 +1,10 @@
+/* Legacy: Local-Shop-AN(TTD_w473oq0)-CM-Purchase */
+var trackingProducts = $('.trackingProducts').val();
+var arrProductInfo = trackingProducts.split(",");
+var totalPrice = 0;
+for (var i = 0; i < arrProductInfo.length; i++) {
+     var product = arrProductInfo[i].split(";");
+     totalPrice = totalPrice + parseInt($.trim(product[3]).replace(/[^0-9]/g, '')) / 10;
+}
+var ttdUrl = "//insight.adsrvr.org/track/conv/?adv=w473oq0&ct=0:86bvsp3&fmt=3&v=" + totalPrice;
+ $('body').append("<img src="+ ttdUrl + " width=\"0\" height=\"0\"/>");
